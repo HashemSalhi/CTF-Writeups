@@ -25,7 +25,9 @@ I'll follow the the tool manual on how to use it.
 I'll be using GIMP as recommended in the tool repo, we need to crop the image down to just the pixelated area.
 Notice that each pixelated block size is `8x8 px` .
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot2.png">
-###Editing the tool configurations
+
+## Editing the tool configurations
+
 Lets take a look on the character set the tool uses, which in the `preload.ts` file,
 It's `abcdefghijklmnopqrstuvwxyz ` 
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot3.png">
