@@ -12,7 +12,7 @@ The super secret organization changed their flag again. Can you work your magic 
 ## Solution
 
 When we look at the given `png` file, we notice the redacted, pixelated text.
-<img src="./Screensshots/Screenshot1.png">
+<img src="../Screensshots/Screenshot1.png">
 
 There is a tool called **[Unredacter](https://github.com/bishopfox/unredacter)** that can uncover redacted, pixelated text to reveal the original text.
 This blog provides extensive information about the tool https://bishopfox.com/blog/unredacter-tool-never-pixelation.
