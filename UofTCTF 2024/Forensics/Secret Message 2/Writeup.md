@@ -28,6 +28,7 @@ Lets take a look on the character set the tool uses, which in the `preload.ts` f
 It's `abcdefghijklmnopqrstuvwxyz ` 
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot3.png">
 Going back to the challenge description the hint states that there is an underscore in the flag characters so let's add it to `guessable_characters` to look like this :
+
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot4.png">
 ### Running the tool
 We are now ready to start the tool. Run `npm start` and the tool gui will pop up.
