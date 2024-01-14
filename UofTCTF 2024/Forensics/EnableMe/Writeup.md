@@ -11,7 +11,10 @@ You've received a confidential document! Follow the instructions to unlock it.
 
 ## Solution
 
-We got a file called `invoice.docm`, .docm files are a Microsoft Word **macro-enabled** document.
+We got a file called `invoice.docm`, **.docm** files are a Microsoft Word **macro-enabled** document.
+I ran the file using an online sandbox called [any.run](https://app.any.run/tasks/7da2e855-e4d8-4e9b-b449-1fad3cc72ccd) and this what I got :
+<img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/EnableMe/Screenshots/Screenshot.png">
+
 So let's check the files macros using `olevba`.
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/EnableMe/Screenshots/Screenshot1.png">
 
