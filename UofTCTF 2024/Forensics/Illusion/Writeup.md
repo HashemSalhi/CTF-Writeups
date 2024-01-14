@@ -92,7 +92,7 @@ It worked !
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Illusion/Screenshots/Screenshot7.png">
 
 We've gotten one side of the conversation. Now we need the other part which is the server side.
-To extract the **oldcss** data, I simply used the OG method of `strings` and `grep` and I parsed them manually 
+To extract the **oldcss** data, I simply used the OG method of `strings` and `grep` and I parsed the data manually 
 
     strings traffic.pcapng | grep "oldcss"
 Lets feed the data again to our script 
