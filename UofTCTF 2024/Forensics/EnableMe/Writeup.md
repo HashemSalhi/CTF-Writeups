@@ -1,1 +1,43 @@
 
+# UofTCTF 2024
+
+I'll break down the steps to solve **EnableMe - Forensics** challenge.
+
+# Challenge Description
+
+You've received a confidential document! Follow the instructions to unlock it.
+
+>Note: This is not malware
+
+## Solution
+
+We got a file called `invoice.docm`, .docm files are a Microsoft Word **macro-enabled** document.
+So let's check the files macros using `olevba`.
+<img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/EnableMe/Screenshots/Screenshot1.png">
+
+    Sub AutoOpen()
+        Dim v6 As Variant, v7 As Variant
+        v6 = Array(98, 120, 113, 99, 116, 99, 113, 108, 115, 39, 116, 111, 72, 113, 38, 123, 36, 34, 72, 116, 35, 121, 72, 101, 98, 121, 72, 116, 39, 115, 114, 72, 99, 39, 39, 39, 106)
+        v7 = Array(44, 32, 51, 84, 43, 53, 48, 62, 68, 114, 38, 61, 17, 70, 121, 45, 112, 126, 26, 39, 21, 78, 21, 7, 6, 26, 127, 8, 89, 0, 1, 54, 26, 87, 16, 10, 84)
+        
+        Dim v8 As Integer: v8 = 23
+    
+        Dim v9 As String, v10 As String, v4 As String, i As Integer
+        v9 = ""
+        For i = 0 To UBound(v6)
+            v9 = v9 & Chr(v6(i) Xor Asc(Mid(Chr(v8), (i Mod Len(Chr(v8))) + 1, 1)))
+        Next i
+    
+        v10 = ""
+        For i = 0 To UBound(v7)
+            v10 = v10 & Chr(v7(i) Xor Asc(Mid(v9, (i Mod Len(v9)) + 1, 1)))
+        Next i
+    
+        MsgBox v10
+    End Sub
+
+
+The code takes the bytes in `v6` and **XOR** them using the key (**23**)
+Simply apply that to the bytes in `v6`.
+<img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/EnableMe/Screenshots/Screenshot2.png">
+**uoftctf{d0cx_f1l35_c4n_run_c0de_t000}**
