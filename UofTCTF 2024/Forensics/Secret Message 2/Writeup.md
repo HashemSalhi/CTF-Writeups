@@ -59,7 +59,7 @@ I spent some time on this. The problem is with our cropped image. I noticed a sm
 
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot7.png">
 
-But the block before and upward of the pixelated area contains some other white shades like `#fefefe` and '#fdfdfd', which means that it's a part of the pixelated area.
+But the block before and upward of the pixelated area contains some other white shades like `#fefefe` and `#fdfdfd`, which means that it's a part of the pixelated area.
 
 <img src="https://github.com/HashemSalhi/CTF-Writeups/blob/main/UofTCTF%202024/Forensics/Secret%20Message%202/Screenshots/Screenshot8.png">
 
